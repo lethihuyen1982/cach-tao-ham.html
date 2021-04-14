@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="number-1" type="text">
+    <input id="number-2" type="text">
+    <input id="number-3" type="text">
+
+    <table>
+        <tr>
+            <td style="border: 1px solid black;width: 150px;" id="output1">0</td>
+            <td style="border: 1px solid black;width: 150px;" id="output2">0</td>
+            <td style="border: 1px solid black;width: 150px;" id="output3">0</td>
+
+
+        </tr>
+    </table>
+    <button onclick="calculateSum()">Sum</button>
+    <button onclick="checkN1DivisibleN2()">Divisible</button>
+    <button onclick="findMaxNumber()">Max</button>
+
+    <script>
+        function calculateSum() {
+            let n1 = getNumber1()
+            let n2 = getNumber2()
+            let n3 = getNumber3()
+            let sum = sumOfN1AndN2AndN3(n1, n2, n3)
+            document.getElementById("output1").innerText = sum
+            let division = checkN1DivisibleN2(n1, n2)
+            document.getElementById("output2").innerText = division
+            let max = findMaxNumber(n1, n2, n3)
+            document.getElementById("output3").innerText = max
+
+        }
+
+
+        function sumOfN1AndN2AndN3(val1, val2, val3) {
+            return Number(val1) + Number(val2) + Number(val3)
+        }
+
+        function getNumber1() {
+            return getValue("number-1")
+        }
+
+        function getNumber2() {
+            return getValue("number-2")
+        }
+
+        function getNumber3() {
+            return getValue("number-3")
+        }
+
+        function getValue(id) {
+            return document.getElementById(id).value
+        }
+
+        function checkN1DivisibleN2(val1, val2) {
+            if (Number(val1) % Number(val2) == 0)
+                return val1 + " is divisible " + val2
+        }
+
+        function findMaxNumber(val1, val2, val3) {
+            max = Number(val1);
+            if (Number(val2)>max){
+                max = val2
+            }
+            else if (Number(val3) > max) {
+                max = val3
+            }
+            return max
+        }
+
+    </script>
+
+</body>
+
+</html>
