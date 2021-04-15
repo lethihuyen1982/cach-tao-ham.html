@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim gia tri min cua mang</title>
+</head>
+
+<body>
+   Min <pre id="pannel1"></pre>
+   Max <pre id="pannel2"></pre>
+    <script>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8]
+        let min = minArray1(arr1)
+        document.getElementById("pannel1").innerText = min
+        let max = maxArray1(arr1)
+        document.getElementById("pannel2").innerText = max
+
+
+        function minArray1(arr1) {
+            if (arr1.length == 0)
+                return -1
+            let min = arr1[0]
+            for (let i = 1; i < arr1.length; i++) {
+                if (arr1[i] < min) {
+                    min = arr1[i]
+                }
+            }
+            return min
+        }
+
+        function maxArray1(arr1)    {
+            if (arr1.length == 0)
+                return -1
+            let max = arr1[0]
+            for (let i = 1; i < arr1.length; i++) {
+                if (arr1[i] > max) {
+                    max = arr1[i]
+                }
+            }
+            return max 
+        }
+    </script>
+</body>
+
+</html>
