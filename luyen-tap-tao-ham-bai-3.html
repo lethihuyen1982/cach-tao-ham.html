@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyen tap tao ham bai 3</title>
+</head>
+
+<body>
+    Number 1 <input id="n1" type="text">
+    <br>
+    <br>
+    Number 2 <input id="n2" type="text">
+    <br>
+    <br>
+     <button id="panel1" onclick="displayBiggerNumber()">Comparation</button>
+     <button id="panel2" onclick="displayBiggerNumber()">Sum</button>
+
+
+    <script>
+
+        function displayBiggerNumber(n1, n2) {
+            n1 = Number(document.getElementById("n1").value)
+            n2 = Number(document.getElementById("n2").value)
+            if (n1 > n2) {
+                document.getElementById("panel1").innerText = n1 + " is bigger than " + n2
+            }
+            return document.getElementById("panel2").innerText = (n1 + n2)
+        }
+
+    </script>
+</body>
+
+</html>
